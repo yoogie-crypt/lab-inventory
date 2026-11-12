@@ -1,0 +1,57 @@
+/* base.css: variabel warna, font, reset, utilitas, animasi */
+:root {
+  --bg: #e8ecf0;
+  --surface: #ffffff;
+  --surface-2: #f4f6f8;
+  --ink: #1b2838;
+  --ink-2: #4b5a6b;
+  --ink-3: #7a8796;
+  --line: #d4dbe3;
+  --navy: #16314f;
+  --navy-2: #21426a;
+  --blue: #2c5ea8;
+  --blue-dark: #224b88;
+  --tag: #f4c542;
+  --tag-ink: #3a2e05;
+  --ok: #24704a;
+  --ok-bg: #e0f0e6;
+  --warn: #855c00;
+  --warn-bg: #fbefc6;
+  --danger: #b23a34;
+  --danger-bg: #f8e2e0;
+
+  --font: 'Archivo', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+
+  --r-panel: 10px;
+  --r-input: 6px;
+  --r-tag: 3px;
+  --shadow-modal: 0 18px 50px rgba(22, 49, 79, 0.28);
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, p { margin: 0; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.muted { color: var(--ink-2); }
+.mono { font-family: var(--mono); font-size: 13px; }
+
+@keyframes fade { from { opacity: 0; } }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

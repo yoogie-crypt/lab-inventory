@@ -1,0 +1,19 @@
+/* transaksi.css: halaman peminjaman */
+
+.grid-form { display: grid; grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); gap: 20px; align-items: start; }
+
+.selected-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  border-radius: var(--r-input);
+  font-size: 14px;
+}
+.selected-item .muted { flex-basis: 100%; font-size: 13px; }
+
+@media (max-width: 1024px) {
+  .grid-form { grid-template-columns: 1fr; }
+}
